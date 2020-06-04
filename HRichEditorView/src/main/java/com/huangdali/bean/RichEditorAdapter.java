@@ -3,8 +3,7 @@ package com.huangdali.bean;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +12,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
@@ -32,7 +35,7 @@ import io.valuesfeng.picker.engine.GlideEngine;
  * Created by HDL on 2017/3/14.
  */
 
-public class RichEditorAdapter extends RecyclerView.Adapter<RichEditorAdapter.MyViewHolder> implements ItemTouchHelperAdapter {
+public class RichEditorAdapter extends  RecyclerView.Adapter<RichEditorAdapter.MyViewHolder> implements ItemTouchHelperAdapter {
     private List<EContent> datas;
     private Activity context;
     private static final int REQUEST_CODE_CHOOSE_ITEM_IMG = 1002;//更改item图片
@@ -293,9 +296,7 @@ public class RichEditorAdapter extends RecyclerView.Adapter<RichEditorAdapter.My
 
     @Override
     public void onItemClear(RecyclerView.ViewHolder viewHolder) {
-        //拖拽结束后恢复view的状态
-        viewHolder.itemView.setScaleX(1.0f);
-        viewHolder.itemView.setScaleY(1.0f);
+
 
     }
 

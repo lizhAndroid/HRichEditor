@@ -1,6 +1,7 @@
 package com.huangdali.utils;
 
-import android.support.v7.widget.RecyclerView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Created by HDL on 2017/3/17.
